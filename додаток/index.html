@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт Знайомств</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      background-color: #ffffff;
+      color: #333;
+      text-align: center;
+    }
+
+    .onboarding-container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      box-sizing: border-box;
+      padding-bottom: 80px;
+    }
+
+    .illustration {
+      width: 100%;
+      padding-top: 50px;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .illustration img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .main-button {
+      width: 90%;
+      padding: 15px 30px;
+      margin: 20px auto;
+      border: none;
+      border-radius: 8px;
+      background-color: #f4625b;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(244, 98, 91, 0.4);
+      transition: background-color 0.3s;
+    }
+
+    .description {
+      margin: 40px 0;
+      padding: 0 15px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #777;
+      text-align: center;
+    }
+
+    .bottom-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 400px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      background-color: white;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    .nav-button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      flex-shrink: 0;
+    }
+
+    .skip-button {
+      background-color: #f8f8f8;
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    .next-button {
+      background-color: #f4625b;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .page-indicators {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .square-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      margin: 0 4px;
+      background-color: #e0e0e0;
+      transition: background-color 0.3s;
+    }
+
+    .square-dot.active {
+      background-color: #f4625b;
+    }
+  </style>
+</head>
+<body>
+<div class="onboarding-container">
+  <div class="illustration">
+    <img src="фото1.svg" alt="Ілюстрація: Зустрічайте нових людей онлайн">
+  </div>
+
+  <button class="main-button">MEET NEW PEOPLE</button>
+
+  <p class="description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud
+    exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  </p>
+
+  <div class="bottom-navigation">
+    <button class="nav-button skip-button">SKIP</button>
+
+    <div class="page-indicators">
+      <div class="square-dot active"></div>
+      <div class="square-dot"></div>
+      <div class="square-dot"></div>
+    </div>
+
+    <button class="nav-button next-button">NEXT</button>
+  </div>
+</div>
+</body>
+</html>

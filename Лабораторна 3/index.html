@@ -38,6 +38,36 @@
       color: #555;
       line-height: 1.8;
     }
+
+    .entity-table {
+      width: 60%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .entity-table th,
+    .entity-table td {
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      text-align: center;
+    }
+
+    .entity-table th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+
+    .entity-table td:first-child {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .entity-table td:last-child {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f9f9f9;
+      color: #c7254e;
+    }
   </style>
 </head>
 <body>
@@ -66,5 +96,44 @@
   коли не знаєш, з чого їх почать,<br>
   бо всі слова були уже чиїмись.
 </p>
+
+<table class="entity-table">
+  <thead>
+  <tr>
+    <th>Символ, що відображається</th>
+    <th>HTML-код (амперсант-послідовність)</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>&</td>
+    <td>&amp;amp;</td>
+  </tr>
+  <tr>
+    <td><</td>
+    <td>&amp;lt;</td>
+  </tr>
+  <tr>
+    <td>></td>
+    <td>&amp;gt;</td>
+  </tr>
+  <tr>
+    <td>"</td>
+    <td>&amp;quot;</td>
+  </tr>
+  <tr>
+    <td>'</td>
+    <td>&amp;apos;</td>
+  </tr>
+  <tr>
+    <td>©</td>
+    <td>&amp;copy;</td>
+  </tr>
+  <tr>
+    <td>€</td>
+    <td>&amp;euro;</td>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>

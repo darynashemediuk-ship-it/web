@@ -6,8 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.5;
+    }
     h1 {
       text-align: center;
+    }
+
+    hr {
+      border: none;
+      margin: 20px auto;
+    }
+
+    .hr-1 { height: 1px; width: 100%; background-color: #333; }
+    .hr-2 { height: 3px; width: 80%; background-color: #f00; }
+    .hr-3 { height: 5px; width: 60%; background-color: #00f; }
+    .hr-4 { height: 2px; width: 90%; background-color: #0f0; }
+    .hr-5 { height: 10px; width: 50%; background-color: #f90; }
+    .hr-6 {
+      height: 4px;
+      width: 70%;
+      background-image: linear-gradient(to right, #f00, #00f);
     }
   </style>
 </head>
@@ -21,5 +42,13 @@
 <h4>Приклад заголовку 4-го порядку</h4>
 <h5>Приклад заголовку 5-го порядку</h5>
 <h6>Приклад заголовку 6-го порядку</h6>
+
+<h1>Приклади використання горизонтальних лінійок</h1>
+<hr class="hr-1">
+<hr class="hr-2">
+<hr class="hr-3">
+<hr class="hr-4">
+<hr class="hr-5">
+<hr class="hr-6">
 </body>
 </html>

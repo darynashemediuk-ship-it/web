@@ -102,6 +102,47 @@
     a:active {
       color: #000099;
     }
+
+    .styled-table-16 {
+      margin: 30px auto;
+      width: 50%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border: 3px solid #000;
+    }
+
+    .styled-table-16 th,
+    .styled-table-16 td {
+      padding: 15px;
+      border: 1px solid #333;
+    }
+
+    .styled-table-16 ul {
+      text-align: left;
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .cell-1-1 {
+      background-color: #ffcccc;
+      color: #800000;
+    }
+
+    .cell-1-2 {
+      background-color: #ccffcc;
+      color: #004d00;
+    }
+
+    .cell-2-1 {
+      background-color: #ccccff;
+      color: #000066;
+    }
+
+    .cell-2-2 {
+      background-color: #ffffcc;
+      color: #996600;
+    }
   </style>
 </head>
 <body>
@@ -263,5 +304,29 @@
   </a>
 </div>
 
+<h1>Приклад використання таблиць</h1>
+
+<table class="styled-table-16">
+  <tr>
+    <th class="cell-1-1">Список викладачів</th>
+    <th class="cell-1-2">Список студентів</th>
+  </tr>
+  <tr>
+    <td class="cell-2-1">
+      <ul>
+        <li>Зубенко Ігор Ростиславович</li>
+        <li>Ковальчук Інна В'ячеславівна</li>
+        <li>Коцюк Леся Миколаївна</li>
+      </ul>
+    </td>
+    <td class="cell-2-2">
+      <ul>
+        <li>Бакунець Вікторія Адамівна</li>
+        <li>Панько Богдана Ігорівна</li>
+        <li>Шемедюк Дарина Олександрівна</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 </body>
 </html>

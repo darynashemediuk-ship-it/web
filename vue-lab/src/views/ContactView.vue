@@ -1,0 +1,23 @@
+<script setup lang="ts">
+import UserCard from '@/components/UserCard.vue';
+</script>
+
+
+<template>
+  <div class="contact-page">
+    <h1>Сторінка контактів</h1>
+    <p>Це наша нова сторінка контактів!</p>
+
+    <div class="user-cards-row">
+      <UserCard username="Student_1" :isActive="true" />
+      <UserCard username="Student_2" :isActive="false" />
+    </div>
+
+  </div>
+</template>
+
+<style scoped>
+.contact-page {
+  padding: 20px;
+}
+</style>

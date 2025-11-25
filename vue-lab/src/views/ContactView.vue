@@ -4,8 +4,8 @@ import UserCard from '@/components/UserCard.vue';
 
 
 <template>
-  <div class="contact-page">
-    <h1>Сторінка контактів</h1>
+  <div class="p-5">
+    <h1 class="text-2xl font-bold mb-4">Сторінка контактів</h1>
     <p>Це наша нова сторінка контактів!</p>
 
     <div class="user-cards-row">
@@ -15,9 +15,3 @@ import UserCard from '@/components/UserCard.vue';
 
   </div>
 </template>
-
-<style scoped>
-.contact-page {
-  padding: 20px;
-}
-</style>

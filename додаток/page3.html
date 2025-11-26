@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FATED - Вітання</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        :root {
+            --main-red: #f76767;
+            --skip-grey: #f0f0f0;
+            --text-color: #555;
+            --button-radius: 10px;
+            --content-max-width: 800px;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: white;
+        }
+
+        .splash-wrapper {
+            width: 100%;
+            max-width: var(--content-max-width);
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            justify-content: space-between;
+        }
+
+        .illustration-container {
+            width: 100%;
+            height: 55vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 600px;
+        }
+
+        .illustration-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+
+        .text-content-container {
+            width: 100%;
+            max-width: var(--content-max-width);
+        }
+
+        @media (max-width: 640px) {
+            .text-content-container {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+        }
+
+
+        .main-action-button {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 18px 0;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            border: none;
+            border-radius: var(--button-radius);
+            background-color: var(--main-red);
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 10px 20px -5px rgba(247, 103, 103, 0.5);
+            transition: all 0.2s;
+        }
+
+        .main-action-button:hover {
+            box-shadow: 0 5px 10px -3px rgba(247, 103, 103, 0.3);
+        }
+
+        .description-text {
+            color: var(--text-color);
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .bottom-nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            max-width: var(--content-max-width);
+        }
+
+        @media (max-width: 640px) {
+            .bottom-nav {
+                max-width: 100%;
+                padding: 10px 20px;
+            }
+        }
+
+
+        .nav-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: var(--button-radius);
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .nav-skip {
+            background-color: var(--skip-grey);
+            color: var(--text-color);
+        }
+
+        .nav-next {
+            background-color: var(--main-red);
+            color: white;
+            box-shadow: 0 5px 10px -3px rgba(247, 103, 103, 0.4);
+        }
+
+        .pagination-dots {
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background-color: #ddd;
+            transition: background-color 0.2s;
+        }
+
+        /* Стилі для третьої сторінки - активна третя точка */
+        .pagination-dots .dot:nth-child(1),
+        .pagination-dots .dot:nth-child(2) {
+            background-color: #ddd; /* Перша та друга точки не активні */
+        }
+
+        .pagination-dots .dot:nth-child(3) {
+            background-color: var(--main-red); /* Третя точка активна */
+        }
+        /* Кінець стилів для третьої сторінки */
+    </style>
+</head>
+<body>
+
+<div class="splash-wrapper">
+
+    <div class="illustration-container">
+        <img src="photo3.svg" alt="Ілюстрація для знаходження спорідненої душі">
+    </div>
+
+    <div class="text-content-container">
+
+        <button class="main-action-button">FIND YOUR SOULMATE</button>
+
+        <p class="description-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+    </div>
+
+    <div class="bottom-nav">
+        <button class="nav-button nav-skip">SKIP</button>
+
+        <div class="pagination-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot active"></div>
+        </div>
+
+        <button class="nav-button nav-next">NEXT</button>
+    </div>
+</div>
+
+</body>
+</html>

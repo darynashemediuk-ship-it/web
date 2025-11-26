@@ -58,7 +58,7 @@ const props = defineProps<{
   imageSrc: string;
   imageAlt: string;
   buttonText: string;
-  currentPage: number; // 1, 2, або 3
+  currentPage: number;
   descriptionText: string;
 }>();
 </script>

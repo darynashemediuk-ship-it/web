@@ -85,7 +85,6 @@ const nextPage = () => {
   if (currentPageId.value < 3) {
     currentPageId.value++;
   } else {
-    // Після останнього слайду переходимо на сторінку реєстрації
     router.push('/register');
   }
 };

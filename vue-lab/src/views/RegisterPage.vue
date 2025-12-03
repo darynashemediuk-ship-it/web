@@ -72,24 +72,20 @@
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 
-// Типизація полів форми
 type FormFields = 'username' | 'password' | 'email';
 
-// 1. Стан форми
 const formData = ref({
   username: '',
   password: '',
   email: ''
 });
 
-// 2. Стан помилок
 const errors = ref({
   username: '',
   password: '',
   email: ''
 });
 
-// 3. Правила валідації (більш суворі для реєстрації)
 const validationRules: Record<FormFields, (value: string) => string> = {
   username: (value: string) => {
     if (!value) return 'Ім\'я користувача обов\'язкове.';
@@ -108,12 +104,10 @@ const validationRules: Record<FormFields, (value: string) => string> = {
   }
 };
 
-// 4. Функція для "живої" валідації окремого поля
 const validateField = (fieldName: FormFields) => {
   errors.value[fieldName] = validationRules[fieldName](formData.value[fieldName]);
 };
 
-// 5. Функція для повної валідації форми
 const validateForm = () => {
   let isValid = true;
 
@@ -127,7 +121,6 @@ const validateForm = () => {
   return isValid;
 };
 
-// 6. Обробник відправки форми
 const handleRegisterSubmit = () => {
   if (validateForm()) {
     console.log('✅ Реєстрація успішна! Дані форми:');
@@ -135,7 +128,6 @@ const handleRegisterSubmit = () => {
     console.log('Password:', formData.value.password);
     console.log('Email:', formData.value.email);
 
-    // Тут буде логіка API-запиту
   } else {
     console.log('❌ Реєстрація не вдалася. Будь ласка, виправте помилки.');
   }
@@ -149,7 +141,6 @@ const handleRegisterSubmit = () => {
   --main-red: #f4625b;
 }
 
-/* 1. Основний контейнер (ОНОВЛЕНО) */
 .main-page-container {
   font-family: 'Lato', sans-serif;
   color: white;
@@ -179,12 +170,11 @@ const handleRegisterSubmit = () => {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  flex-grow: 1; /* Займе простір, що залишився */
-  padding: 10px 0 20px 0; /* Додано нижній відступ */
+  flex-grow: 1;
+  padding: 10px 0 20px 0;
   box-sizing: border-box;
 }
 
-/* 2. Обгортка форми (ОНОВЛЕНО) */
 .auth-content-wrapper {
   width: 100%;
   max-width: 400px;
@@ -197,7 +187,6 @@ const handleRegisterSubmit = () => {
   gap: 0px;
 }
 
-/* 3. Логотип */
 .logo-icon-large {
   width: 25vh;
   height: 25vh;
@@ -222,7 +211,6 @@ const handleRegisterSubmit = () => {
   text-shadow: 2px 2px 0px #e75a52, 3px 3px 0px #b03c37;
 }
 
-/* 4. Вкладки */
 .flex { display: flex; }
 .w-full { width: 100%; }
 .mb-3 { margin-bottom: 0.75rem; }
@@ -243,7 +231,6 @@ const handleRegisterSubmit = () => {
 .tab-login { background-color: var(--main-red); color: white; margin-right: 5px; }
 .tab-register { background-color: white; color: var(--main-red); margin-left: 5px; }
 
-/* 5. Група вводу (для стабільності) */
 .input-group {
   width: 100%;
   margin-bottom: 5px;
@@ -265,7 +252,6 @@ const handleRegisterSubmit = () => {
 }
 .action-input-field::placeholder { color: #999; }
 
-/* 6. СТИЛІ ПОМИЛКИ */
 .input-error-field {
   border: 2px solid #ffdddd !important;
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
@@ -285,7 +271,6 @@ const handleRegisterSubmit = () => {
   opacity: 1;
 }
 
-/* 7. Кнопки та посилання */
 .main-register-button {
   width: 100%;
   padding: 15px;
